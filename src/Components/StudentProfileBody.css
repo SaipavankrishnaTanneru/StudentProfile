@@ -1,0 +1,81 @@
+.student-profile-section {
+  width: 100%;
+  min-width: 35vh;
+  background-image: url('/src/Assets/BG.png');
+  background-size: 100% 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 0px 0px 6px 6px;
+  border-right: 1px solid #E6E4F0;
+  border-bottom: 1px solid #E6E4F0;
+  border-left: 1px solid #E6E4F0;
+}
+
+.search-input-group .form-control {
+  border-radius: 0 6px 6px 0;
+  background-color: #fff;
+}
+
+.search-input-group .input-group-text {
+  border-radius: 6px 0 0 6px;
+}
+
+.filter-panel-container {
+  width: 90%;
+  max-width: 700px;
+  border: 1px solid #ddd;
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"] {
+  accent-color: #3f51b5;
+}
+
+.search-filter-wrapper {
+  position: relative;
+}
+
+.filter-toggle-box {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1050; /* Bootstrap modals use 1055+, so this is safe */
+  /* width: 374px;
+  height: 350px; */
+ border-radius: 0px 0px 10px 10px;
+border: 1px solid #DEDDDD;
+background: #FDFDFD;
+box-shadow: 0px 4px 7.2px 0px rgba(0, 0, 0, 0.25);
+}
+.student-category-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  max-width: 100%;
+}
+
+/* Force last 2 items to appear on the second row */
+.student-category-grid > :nth-child(4),
+.student-category-grid > :nth-child(5) {
+  grid-column: span 1;
+}
+
+
+.alerts-container.disabled {
+  opacity: 0;
+  pointer-events: none;
+  user-select: none;
+  cursor: not-allowed;
+  transition: opacity 0.3s ease;
+}
+/* Add to your StudentProfileBody.css */
+.student-profile-card {
+  border: 1px solid #E6E4F0;
+  transition: all 0.3s ease;
+}
+
+.student-profile-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
