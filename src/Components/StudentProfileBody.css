@@ -69,13 +69,99 @@ box-shadow: 0px 4px 7.2px 0px rgba(0, 0, 0, 0.25);
   cursor: not-allowed;
   transition: opacity 0.3s ease;
 }
-/* Add to your StudentProfileBody.css */
 .student-profile-card {
-  border: 1px solid #E6E4F0;
+  border: 0.063rem solid #E6E4F0; /* 1px */
+  border-radius: 0.5rem; /* 8px */
+  background: #FFF;
   transition: all 0.3s ease;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.05); /* soft hover shadow */
 }
 
 .student-profile-card:hover {
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transform: translateY(-2px);
+  box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); /* stronger hover */
+  transform: translateY(-0.125rem); /* -2px */
+}
+
+/* Wrapper Around Card */
+.student-profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+}
+
+/* Avatar Image Styling */
+.student-profile-card img {
+  width: 6rem;       /* ~96px */
+  height: 6rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 0.375rem solid #FFF; /* 6px white border */
+  aspect-ratio: 1/1;
+  box-shadow: 0 0 0.25rem rgba(0,0,0,0.05);
+}
+/* Skeleton animation keyframes */
+@keyframes skeleton-loading {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Base styles for skeleton cards */
+.skeleton-card {
+  padding: 1.2rem;
+  border-radius: 1rem;
+  background: #fff;
+  box-shadow: 0 0 0.25rem rgba(0, 0, 0, 0.25);
+  border: 1px solid #E2E2E2;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Circular avatar */
+.skeleton-avatar {
+  width: 6rem;
+  height: 6rem;
+  border-radius: 180px;
+  margin: 0 auto 1rem;
+  border: 6px solid #FFF;
+  background: linear-gradient(135deg, #D8D8D8, #AAA, #D8D8D8);
+  background-size: 400% 100%;
+  animation: skeleton-loading 800ms ease-in-out infinite;
+  box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.25);
+}
+
+/* Lines */
+.skeleton-line {
+  height: 1rem;
+  background: linear-gradient(135deg, #D8D8D8, #AAA, #D8D8D8);
+  background-size: 400% 100%;
+  border-radius: 0.5rem;
+  margin-bottom: 0.75rem;
+  animation: skeleton-loading 800ms ease-in-out infinite;
+}
+
+.skeleton-line.short {
+  width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.skeleton-badges {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.skeleton-badge {
+  width: 3rem;
+  height: 1rem;
+  border-radius: 0.5rem;
+  background: linear-gradient(135deg, #D8D8D8, #AAA, #D8D8D8);
+  background-size: 400% 100%;
+  animation: skeleton-loading 800ms ease-in-out infinite;
 }
